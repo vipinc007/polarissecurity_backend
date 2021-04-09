@@ -28,7 +28,7 @@ class object_manager():
         dm = data_manager(self.data_file_name)
         values = dm.unpickle_data()
         obj = None
-        if len(values) > 0:
+        if len(values["obj"]) > 0:
             obj = random.choice(values["obj"])
             values["obj"].remove(obj)
             dm.pickle_data(values)
